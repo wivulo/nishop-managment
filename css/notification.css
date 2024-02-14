@@ -1,0 +1,47 @@
+#modal-notification {
+    position: fixed;
+    display: flex;
+    width: 400px;
+    height: auto;
+    left: calc(50% - 200px);
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+    border-radius: 10xp;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+}
+
+
+#modal-notification.open{
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+#modal-notification.close{
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+}
+
+#modal-notification .modal-content{
+    width: 400px;
+    height: auto;
+    
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#modal-notification .modal-content.error{
+    background: var(--system-error);
+}
+
+#modal-notification .modal-content.success{
+    background: var(--system-success);
+}
+
+#modal-notification .modal-content.warning{
+    background: var(--system-warning);
+}

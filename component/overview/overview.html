@@ -1,0 +1,107 @@
+<div class="dashboard flex flex-col gap-8 p-10">
+    <div class="w-full title-container">
+        <h2 class="title text-darkgray">Overview</h2>
+    </div>
+
+    <div class="w-full flex justify-between row">
+        <div class="block flex gap-3">
+            <div class="w-30 flex justify-center mt-5">
+                <div class="w-50px h-40px rounded-10 border border-gray flex justify-center items-center">
+                    <div class="w-30px h-30px p-2 rounded-full border border-gray flex justify-center items-center">
+                        <i class="fa-solid fa-dollar-sign font-bold text-darkgray"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-50 flex flex-col justify-center">
+                <p class="relative -top-13">Sales</p>
+                <h2 class="text-3xl">$ 8,100.00</h2>
+            </div>
+
+            <div class="w-20 flex items-center justify-center">
+                <div class="flex relative top-5">
+                    <span class="text-yellow-50 text-sx"><i class="fa-solid fa-chart-line"></i> 2%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="block flex gap-3">
+            <div class="w-30 flex justify-center mt-5">
+                <div class="w-50px h-40px rounded-10 border border-gray flex justify-center items-center">
+                    <div class="w-30px h-30px p-2 rounded-full border border-gray flex justify-center items-center">
+                        <i class="fa-solid fa-eye font-bold text-darkgray"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-50 flex flex-col justify-center">
+                <p class="relative -top-13">Views</p>
+                <h2 class="text-3xl">100,001.00</h2>
+            </div>
+
+            <div class="w-20 flex items-center justify-center">
+                <div class="flex relative top-5">
+                    <span class="text-yellow-50 text-sx"><i class="fa-solid fa-chart-line"></i> 6%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="block flex gap-3">
+            <div class="w-30 flex justify-center mt-5">
+                <div class="w-50px h-40px rounded-10 border border-gray flex justify-center items-center">
+                    <div class="w-30px h-30px p-2 rounded-full border border-gray flex justify-center items-center">
+                        <i class="fa-solid fa-user font-bold text-darkgray"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-50 flex flex-col justify-center">
+                <p class="relative -top-13">Active now</p>
+                <h2 class="text-3xl">95</h2>
+            </div>
+
+            <div class="w-20 flex items-center justify-center">
+                <div class="flex relative top-5">
+                    <span class="text-yellow-50 text-sx"><i class="fa-solid fa-chart-line"></i> 4%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-col">
+        <div class="py-5">
+            <h5 class="text-darkgray">Website traffic</h5>
+        </div>
+
+        <div class="w-full" style="height: 250px;">
+            <canvas id="lineChart" width="400" height="400"></canvas>
+        </div>
+
+    </div>
+
+    <div class="row w-full flex flex-col gap-5 p-10 py-5">
+        <div class="py-5">
+            <h5 class="text-darkgray">Five most saled product</h5>
+        </div>
+
+        <div class="col w-full h-full flex flex-col p-10">
+            <div>
+                <table class="w-full">
+                    <thead class="relative">
+                        <tr class="z-2">
+                            <th scope="col">Photos</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Sales</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <!-- <ul id="products" class="list w-full flex flex-col gap-5"></ul> -->
+        </div>
+    </div>
+
+</div>

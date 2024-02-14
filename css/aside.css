@@ -1,0 +1,148 @@
+.aside{
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.432);
+}
+
+.aside .title{
+    color: rgb(255, 187, 0);
+    transform: scale(1.5);
+}
+
+.aside .search-container{
+    border-radius: 10px;
+    height: 30px;
+    border: 1px solid darkgray;
+}
+
+.aside .open-menu{
+    all: unset;
+    opacity: 0;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    z-index: 90;
+    cursor: pointer;
+}
+
+.aside .close-menu{
+    all: unset;
+    opacity: 0;
+    width: 25px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    transition: all linear .3s;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.aside .close-menu:hover{
+    color: red;
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+.aside .open-menu div{
+    width: 25px;
+    height: 4px;
+    margin: 2px 0;
+}
+
+.list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list.menu:nth-child(1){margin-top: 10px;}
+
+.list .list-title{
+    color: rgb(255, 187, 0);
+    font-size: 1em;
+    margin: 10px 0;
+    top: 0;
+    left: 10px;
+    padding-left: 10px;
+}
+
+.list.menu li{
+    margin: 7px 20px;
+    border-bottom: 1px solid #00000021;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-weight: 600;
+    font-size: .9rem;
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.list.menu li:hover{
+    background-color: #00000021;
+}
+
+.list.menu li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 683px) {
+    .aside{
+        position: absolute;
+        width: 40%;
+        left: 0;
+        top: 0;
+        transform: translateX(-88%);
+        z-index: 100;
+    }
+
+    .aside .open-menu{
+        opacity: 1;
+    }
+
+    .aside .close-menu{
+        opacity: 0;
+    }
+
+    .main{
+        margin-left: 5%;
+    }
+
+    .aside.open .open-menu{
+        opacity: 0;
+        z-index: 80;
+    }
+
+    .aside.open .close-menu{
+        opacity: 1;
+        z-index: 90;
+    }
+
+    .aside.open{
+        transform: translateX(0%);
+        transition: all linear .5s;
+    }
+
+    .aside.close{
+        transform: translateX(-88%);
+        transition: all linear .5s;
+    }
+
+    .aside.close .open-menu{
+        opacity: 1;
+        z-index: 90;
+    }
+
+    .aside.close .close-menu{
+        opacity: 0;
+        z-index: 80;
+    }
+}
+

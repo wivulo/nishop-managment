@@ -1,0 +1,123 @@
+{
+    "users": [
+        {
+            "name": "Walter Ivulo",
+            "username": "wivulo",
+            "email": "wivulo@nishop.com",
+            "password": "1234"
+        }
+    ],
+
+    "product": [
+        {
+            "id": 1,
+            "name": "Leather Bag",
+            "imageSrc": "../../assets/images/product-rectangle-73.png",
+            "description": "Distressed Tote Leather Bag Leather Bag",
+            "price": 216.27,
+            "Emphasis": false,
+            "colors": [],
+            "category": "Minimalist Style",
+            "saled": 0
+        },
+        {
+            "id": 2,
+            "name": "Elastic Straps",
+            "imageSrc": "../../assets/images/rectangle-74.png",
+            "description": "Womens Cognac Leather Elastic Straps",
+            "price": 195.13,
+            "Emphasis": false,
+            "colors": [],
+            "category": "Minimalist Style",
+            "saled": 0
+        },
+        {
+            "id": 3,
+            "name": "Bag",
+            "imageSrc": "../../assets/images/rectangle-75.png",
+            "description": "Distressed Tote Leather Bag Leather Bag",
+            "price": 24.99,
+            "Emphasis": false,
+            "colors": [],
+            "category": "Minimalist Style",
+            "saled": 0
+        },
+        {
+            "id": 4,
+            "name": "Canvas Shoes",
+            "imageSrc": "../../assets/images/rectangle-76.png",
+            "description": "High Top Canvas Shoes",
+            "price": 9.99,
+            "Emphasis": false,
+            "colors": [],
+            "category": "Minimalist Style",
+            "saled": 4
+        },
+        {
+            "id": 5,
+            "name": "Moissanite Rings",
+            "imageSrc": "../../assets/images/rectangle-77.png",
+            "description": "Rose Gold Moissanite Vintage Wedding Ring Set",
+            "price": 14.99,
+            "Emphasis": false,
+            "colors": [],
+            "category": "Wedding Gifts",
+            "saled": 6
+        },
+        {
+            "id": 6,
+            "name": "Bangle",
+            "imageSrc": "../../assets/images/rectangle-78.png",
+            "description": "Blue Topaz Bangle 24K Gold Plated Handmade",
+            "price": 29.99,
+            "Emphasis": false,
+            "colors": [],
+            "category": "Minimalist Style",
+            "saled": 0
+        },
+        {
+            "id": 7,
+            "name": "Nike Air Max",
+            "imageSrc": "../../assets/images/unsplash-m-7-c-qq-gj-b-nm-8.png",
+            "description": "Nike Air Max 270 React ENG Shoes",
+            "price": 1000.99,
+            "Emphasis": true,
+            "colors": [],
+            "category": "Minimalist Style",
+            "saled": 20
+        },
+        {
+            "id": 8,
+            "name": "Light",
+            "imageSrc": "../../assets/images/candiero.png",
+            "description": "Rovena Riva Series 6 Pcs. Wide Seating Claret Red Chair",
+            "price": 50.99,
+            "Emphasis": true,
+            "colors": ["#7CB93E", "#33ABC6", "#1CCD8D", "#3F65EA", "#F64A69", "#A635EC", "#F9A85D"],
+            "category": "Minimalist Style",
+            "saled": 0
+        },
+        {
+            "id": 9,
+            "name": "Iphone 12",
+            "imageSrc": "../../assets/images/iphone12.png",
+            "description": "Iphone 12 128 GB (Red) Apple ",
+            "price": 500.99,
+            "Emphasis": true,
+            "colors": ["#7CB93E", "#3F65EA", "#F64A69", "#A635EC", "#F9A85D"],
+            "category": "Anniversary Gift",
+            "saled": 15
+        },
+        {
+            "id": 10,
+            "name": "Body lotion",
+            "imageSrc": "../../assets/images/redeChair.png",
+            "description": "Rovena Riva Series 6 Pcs. Wide Seating Claret Red Chair",
+            "price": 100.99,
+            "Emphasis": true,
+            "colors": ["#F64A69", "#A635EC", "#F9A85D"],
+            "category": "Minimalist Style",
+            "saled": 12
+        }
+    ]
+}

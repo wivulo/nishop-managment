@@ -1,0 +1,106 @@
+<div class="list-product flex flex-col gap-7">
+    <h2 class="title">List of Product</h2>
+    
+    <div class="w-full flex items-center justify-end gap-7">
+        <button id="toEdit-product" class="toEdit btn w-60px h-20px bg-gray flex justify-center items-center p-10">
+             <i class="fa-solid fa-pen-to-square"></i>
+         </button>
+
+         <button id="toDelete-product" class="delete btn w-60px h-20px bg-gray flex justify-center items-center p-10 text-lg">
+             <i class="fa-solid fa-trash"></i>
+         </button>
+    </div>
+
+    <div>
+        <ul id="productsHeader" class="list flex">
+            <li></li>
+            <li>Photo</li>
+            <li>Name - description</li>
+            <li>Price</li>
+        </ul>
+    </div>
+
+    <div id="product-container" class="product-container">
+        <ul id="products" class="list w-full flex flex-col gap-5"></ul>
+    </div>
+</div>
+
+<div id="modal-toEdit" class="modal close bg-gray-50">
+    <div class="modal-content relative flex justify-center items-center gap-7 bg-gray">
+        <button id="btn-close-toEdit-modal" class="absolute btn top-0 right-0 m-5 text-white">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="flex flex-col w-70 gap-5">
+            <input name="name" id="product-name" class="input border border-darkgray"/>
+            <input name="description" id="product-description" class="input border border-darkgray"/>
+            <input name="price" id="product-price" class="input border border-darkgray" />
+        </div>
+        <div class="w-20 flex flex-col items-center justify-center gap-7">
+            <button id="btn-cancel-toEdit-modal" class="btn w-60px h-20px bg-darkgrey flex justify-center items-center p-10">
+                <i class="fa-solid fa-xmark text-white"></i>
+            </button>
+            <button id="to-confirm-toEdit" class="btn w-60px h-20px bg-darkgrey flex justify-center items-center p-10 text-2xl">
+                <i class="fa-solid fa-check text-white"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-toDelete" class="modal close bg-gray-50">
+    <div class="modal-content relative flex flex-col justify-center items-center gap-7 bg-gray">
+        <button id="btn-close-toDelete-modal" class="absolute btn top-0 right-0 m-6 text-black">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="flex flex-col w-70 gap-5">
+            <h2>Are you sure to delete this product?</h2>
+        </div>
+        <div class="w-20 flex items-center justify-center gap-7">
+            <button id="btn-cancel-toDelete-modal" class="btn w-60px h-20px bg-darkgrey flex justify-center items-center p-10">
+                <i class="fa-solid fa-xmark text-white"></i>
+            </button>
+            <button id="btn-to-confirm-toDelete" class="btn w-60px h-20px bg-darkgrey flex justify-center items-center p-10 text-2xl">
+                <i class="fa-solid fa-check text-white"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-add-Product" class="modal close absolute w-screen h-screen bg-gray-50 flex justify-center items-center">
+    <div class="modal-content bg-gray relative flex justify-center">
+        <button id="btn-close-addProduct-modal"
+            class="btn absolute flex justify-center items-center btn-rounded-full -top-6 -right-6 bg-gray w-30px h-30px">
+           <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="w-50 h-full flex items-center">
+            <form method="post" id="add-product-form" class="flex flex-col w-full gap-7">
+                <input type="text" name="imageSrc" class="input h-30px bg-white p-5" placeholder="Product imageSrc" />
+                <input type="text" name="name" class="input h-30px bg-white p-5" placeholder="Product Name" 
+                    required/>
+                <input type="text" name="price" class="input h-30px bg-white p-5" 
+                placeholder="Product price" required/>
+                <input type="text" name="colors" class="input h-30px bg-white p-5"
+                placeholder="Product Colors">
+                <input type="text" name="category" class="input h-30px bg-white p-5" 
+                placeholder="Product category" required/>
+                <textarea name="description" class="input h-30px bg-white p-5" placeholder="Product Description" rows="3" required></textarea>
+               
+                <button type="submit"
+                    class="btn relative flex justify-center items-center p-10 bg-white my-10 h-25px"
+                    id="btn-save-product">
+                    <span id="save">Save Product</span>
+                    <span id="progressLogin" class="flex w-20px h-20px justify-center items-center">
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <div id="add-product-message-alert" class="flex justify-center items-center h-40px w-full absolute bg-red" style="bottom: 2px;">
+            <p id="add-product-message-content" class="text-gray text-md font-s"></p>
+        </div>
+    </div>
+</div>
+

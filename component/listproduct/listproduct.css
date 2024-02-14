@@ -1,0 +1,190 @@
+.list-product{
+    width: 100%;
+    height: 100%;
+}
+
+.list-product .title{
+    margin: 20px 0;
+    font-weight: 900;
+    color: darkgray;
+    font-size: 2rem;
+}
+
+.list-product .product-container{
+    width: 100%;
+    height: 450px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.list-product ul#productsHeader{
+    background-color: var(--gray-soft);
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.list-product ul#productsHeader li{padding: 0 10px;}
+
+.list-product ul#productsHeader li:nth-child(1){
+    width: 5%;
+}
+
+.list-product ul#productsHeader li:nth-child(2){
+    width: 10%;
+    border-left: 1px solid var(--gray-main);
+}
+
+.list-product ul#productsHeader li:nth-child(3){
+    width: 50%;
+    border-left: 1px solid var(--gray-main);
+}
+
+.list-product ul#productsHeader li:nth-child(4){
+    width: 10%;
+    border-left: 1px solid var(--gray-main);
+}
+
+.list-product .product-container ul#products{
+    height: auto;
+}
+
+.list-product .product-container ul#products li{
+    position: relative;
+    display: flex;
+    gap: 3px;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn .5s linear .1s 1 forwards;
+}
+
+.list-product .product-container ul#products li.checked{
+    background-color: var(--gray-light);
+}
+
+.list-product ul li button{cursor: pointer;}
+
+.list-product ul li button:hover{
+    background: var(--gray-s-light);
+}
+
+.list-product ul li p.product-description{
+    text-overflow: ellipsis;
+}
+
+.modal{
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 110;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal.close{
+    display: none;
+}
+
+.modal .modal-content{
+    width: 50vw;
+    height: 30vh;
+}
+
+.modal button{
+    cursor: pointer;
+}
+
+.modal button:hover{
+    background: var(--gray-s-light);
+}
+
+#modal-toEdit input[name=name], 
+#modal-toEdit input[name=description],
+#modal-toEdit input[name=price]{
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    background-color: var(--gray-soft);
+    height: 35px;
+    padding: 3px 10px;
+}
+
+#modal-toEdit #btn-close-toEdit-modal:hover{
+    background-color: transparent;
+    color: var(--system-error);
+}
+
+button#btn-close-addProduct-modal:hover{
+    background-color: var(--gray-main);
+    color: var(--system-error);
+}
+
+#modal-toEdit button:hover i, #modal-toDelete button:hover i{
+    color: black;
+}
+
+#modal-add-Product .modal-content{
+    height: 80vh;
+}
+
+#modal-add-Product textarea[name=description]{
+    height: 100px;
+}
+
+#add-product-message-alert{
+    opacity: 0;
+    transition: all linear;
+}
+
+#add-product-message-alert.show{opacity: 1; transition: all linear;}
+#add-product-message-alert.hide{opacity: 0; transition: all linear;}
+
+/* Animations*/
+@keyframes slideIn{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--gold-yellow-soft);
+    cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-yellow);
+}

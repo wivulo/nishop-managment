@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishop Managment</title>
+    <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/login.dialog.css">
+    <link rel="stylesheet" href="css/notification.css">
+</head>
+
+<body>
+    <div class="app flex bg-white">
+        <aside class="w-20 h-full bg-gray flex flex-col aside" id="aside-bar">
+            <button class="open-menu flex flex-col" id="btn-open-asideBar">
+                <span class="fa fa-bars"></span>
+            </button>
+
+            <button class="close-menu flex flex-col" id="btn-close-asideBar">
+                <span>&times;</span>
+            </button>
+
+            <div class="w-auto flex justify-center items-center h-10">
+                <h2 class="title w-auto h-auto">N I S H O P</h2>
+            </div>
+
+            <div class="relative flex flex-col h-90">
+
+                <div class="flex justify-center items-center w-full my-10">
+                    <form action="" class="w-80 h-20px search-container flex items-center pl-5 pr-5">
+                        <label for="input-search">
+                            <i class="fa-solid fa-search text-darkgray"></i>
+                        </label>
+                        <input type="search" name="search" class="input p-5 w-90" id="input-search"
+                            placeholder="Search" />
+                    </form>
+                </div>
+
+                <ul class="list menu flex flex-col">
+                    <h5 class="list-title">menu</h5>
+                    <li>
+                        <a href="?component=overview" class="flex gap-7">
+                            <i class="fa-solid fa-chart-line mr-3"></i>
+                            Overview
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?component=listproduct" class="flex gap-7">
+                            <i class="fa-solid fa-list-ul mr-3"></i>
+                            List Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?component=addproduct" class="flex gap-7">
+                            <i class="fa-solid fa-square-plus mr-3"></i>
+                            Add Product
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?component=listusers" class="flex gap-7">
+                            <i class="fa-solid fa-list-ul mr-3"></i>
+                            Listar Users
+                        </a>
+                    </li>
+                    <li>
+                        <a href="?component=settings" class="flex gap-7">
+                            <i class="fa-solid fa-gear mr-3"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="list menu absolute left-0 bottom-0 w-full">
+                    <li class="flex gap-7">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        logout
+                    </li>
+                    <li class="flex gap-7">
+                        <i class="fa-solid fa-user-plus"></i>
+                        register
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="w-80 flex flex-col main">
+            <header class="flex items-center justify-between h-10 w-full p-10 bg-gray-25 border-b">
+                <div class="w-auto flex items-center">
+                    <h5 id="Welcome" class="text-darkgray">Welcome back, sr. <span id="current-user">current user</span>
+                    </h5>
+                </div>
+                <nav class="flex gap-3 w-auto items-center justify-center">
+                    <button id="add-product" class="btn bg-gray p-1r h-10px flex items-center">
+                        <!-- <a href="?component=listproduct&action=addproduct"></a> -->
+                        Add Product
+                    </button>
+
+                    <div class="flex relative">
+                        <button id="btn-open-login-dialog"
+                            class="btn bg-gray p-1r h-10px flex items-center justify-center">login</button>
+
+                        <button id="btn-logout" class="btn flex items-center justify-center">
+                            <span class="fa fa-user"></span>
+                        </button>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="flex w-full h-85 p-10">
+                <section class="w-full" id="injectComponentHere">
+                    <div class="relative flex justify-center items-center w-full h-full">
+                        <span class="fa-solid fa-arrow-rotate-right spin absolute align-self-center text-2xl"></span>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="h-5 w-full bg-gray-25 flex justify-center items-center">
+                <p class="text-sx w-auto">Todos os direitos reservados c 2024 - created by wivulo dev</p>
+            </footer>
+        </div>
+
+        <div id="login-dialog" class="absolute w-screen h-screen bg-gray-50 flex justify-center items-center">
+            <div class="w-50 h-75 bg-gray relative flex justify-center">
+
+                <div class="w-50 h-full flex items-center">
+                    <form method="post" id="login-form" class="flex flex-col w-full gap-7">
+                        <input type="text" name="username" class="input h-30px bg-white p-5"
+                            placeholder="Username or Email" required>
+                        <input type="password" name="password" class="input h-30px bg-white p-5" placeholder="Password"
+                            required>
+                        <div class="my-10">
+                            <input type="checkbox" name="remeber-me" id="remeber-me">
+                            <label for="remeber-me">Lembrar?</label>
+                        </div>
+                        <button type="submit"
+                            class="btn relative flex justify-center items-center p-10 bg-white my-10 h-25px"
+                            id="btn-login">
+                            <span id="logar">Login</span>
+                            <span id="progressLogin" class="flex w-20px h-20px justify-center items-center">
+                                <i class="fa-solid fa-arrow-rotate-right"></i>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="message-content" class="flex justify-center items-center h-40px w-full absolute bg-red"
+                    style="bottom: 2px;">
+                    <p id="message" class="text-gray text-md font-s"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-notification" class="close bg-gray-50">
+            <div id="notification-modal-content"
+                class="modal-content relative flex flex-col justify-center items-center gap-7">
+                <div class="flex justify-center w-full">
+                    <h4 id="notification-message" class="text-white">#########</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="./node_modules/chart.js/dist/chart.umd.js"></script>
+        <script type="module" src="index.js"></script>
+</body>
+
+</html>

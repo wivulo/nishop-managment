@@ -1,0 +1,64 @@
+header #Welcome{
+    opacity: 0;
+    transition: all linear;
+}
+
+header #Welcome.isLogged{
+    opacity: 1;
+    transition: all linear;
+}
+
+#add-product{
+    width: 110px;
+    justify-content: center;
+}
+
+#btn-open-login-dialog{
+    width: 80px;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity linear;
+    transition-delay: .5s;
+}
+
+#btn-open-login-dialog.isLogged{
+    display: none;
+    opacity: 0;
+    transition: opacity linear;
+    transition-delay: .5s;
+}
+
+
+#btn-logout{
+    display: none;
+    opacity: 0;
+    padding: 7px 10px;
+    transition: opacity linear;
+    transition-delay: .5s;
+    font-size: x-large;
+}
+
+#btn-logout.isLogged{
+    display: flex;
+    opacity: 1;
+    transition: opacity linear;
+    transition-delay: .5s;
+}
+
+#btn-logout div:nth-child(1){
+    width: 15px;
+    height: 15px;
+    border-radius:50%;
+}
+
+#btn-logout div:nth-child(2){
+    width: 20px;
+    height: 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+nav > div{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
